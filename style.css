@@ -1,0 +1,33 @@
+#calculator {
+
+  width: 418px;
+  height: 535px;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: pink;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+#total{
+  display: flex;
+  justify-content: flex-end;
+  height: 100px;
+  width: 405px;
+  margin: 10px auto;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  background-color: #FFF;
+  text-align: right;
+  font-size: 60px;
+}
+
+
+#numOps tr td {
+  height: 70px;
+  width: 90px;
+  border: 1px solid blue;
+  margin: 5px;
+  padding: 5px;
+
+}
