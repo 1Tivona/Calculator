@@ -1,5 +1,35 @@
-let numbers = [0,1,2,3,4,5,6,7,8,9];
-for (let i = 0; i < 10; i++){
-  numbers.push(i);
-console.log(numbers);
+let operations = [];
+
+function onButtonClick(event) {
+  let buttonText = event.target.innerText;
+  let total = document.getElementById('total');
+  total.innerHTML = buttonText;
+  operations.push(buttonText);
+
+  if (buttonText == "="){
+    total.innerHTML = calculate(operations)
+  } else if (buttonText == "C") {
+    total.innerHTML = "";
+    operations = []
+  }
 }
+
+function calculate(operations){
+  first_number = parseInt(operations[0])
+  second_number = parseInt(operations[2])
+  operator = operations[1]
+
+  if (operator == "+"){
+    answer = first_number + second_number
+  }else if (operator == "-") {
+    answer = first_number - second_number
+  }else if (operator == "*"){
+    answer = first_number * second_number
+  }else if (operator == "/"){
+    answer = first_number / second_number
+  }
+  return answer
+}
+
+let actions = document.getElementById('numOps');
+actions.addEventListener("click", onButtonClick);
